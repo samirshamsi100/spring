@@ -73,11 +73,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version>${maven.spring-boot.plugin.version}</version>
-				<configuration>
-					<profiles>
-						<profile>local</profile>
-					</profiles>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
@@ -115,6 +110,15 @@
 					<artifactId>spring-cloud-vault-config-databases</artifactId>
 				</dependency>
 			</dependencies>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.springframework.boot</groupId>
+						<artifactId>spring-boot-maven-plugin</artifactId>
+						<version>${maven.spring-boot.plugin.version}</version>
+					</plugin>
+				</plugins>
+			</build>
 		</profile>
 	</profiles>
 </project>
