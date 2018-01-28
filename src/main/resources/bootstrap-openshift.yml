@@ -1,5 +1,4 @@
-spring.application.name: product-catalog
-logging.level.org.springframework: debug  
+spring.application.name: product-catalog 
 spring.cloud.vault:
     host: vault.vault.svc.cluster.local
     port: 8200
@@ -10,12 +9,10 @@ spring.cloud.vault:
         service-account-token-file: /var/run/secrets/kubernetes.io/serviceaccount/token
     config:
         order: 10
-    generic:
-      enabled: true
-#    postgresql:
-#        enabled: true
-#        role: pg-readwrite
-#        backend: database
-#        username-property: spring.datasource.username
-#        password-property: spring.datasource.username
+    postgresql:
+        enabled: true
+        role: pg-readwrite
+        backend: database
+        username-property: spring.datasource.username
+        password-property: spring.datasource.username
 
